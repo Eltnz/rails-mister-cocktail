@@ -1,7 +1,16 @@
 <h1><%= @cocktail.name %></h1>
 
+  <ul class="list-form">
+    <% @cocktail.doses.each do |dose| %>
+      <li><%= dose.description %> - <%= dose.ingredient.name %></li>
+        <%= link_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+          <i class="fa fa-trash destroy_dose"></i>
+        <% end %>
+    <% end %>
+  </ul>
 
 <%= link_to "Edit cocktail", new_cocktail_dose_path(@cocktail) %>
 
 <%= link_to "All cocktails", cocktails_path %>
+
 
