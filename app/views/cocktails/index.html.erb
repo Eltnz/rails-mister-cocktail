@@ -10,7 +10,7 @@
     <div class="cards">
       <% @cocktails.each do |cocktail| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= "https://images.unsplash.com/photo-1571950006124-943b3bc37223?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80/lewagon/fullstack-images/master/uikit/logo.png" %>)">
-        <h2><%=link_to cocktail.name.capitalize, cocktail_path(cocktail) %></h2>
+        <%=link_to cocktail.name.capitalize, cocktail_path(cocktail) %>
       </div>
       <% end %>
   </div>
